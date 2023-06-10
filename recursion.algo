@@ -1,0 +1,15 @@
+FUNCTION is_palindrome(word:STRING[],n:INTEGER) : BOOLEAN
+
+BEGIN
+
+
+IF (word[n]<2) THEN
+    return true;
+ELSE_IF (word[0]!=word[n]-1) THEN
+    return false;
+ELSE
+    return is_palindrome(word[1: length(word)-1])
+END_IF
+
+
+END
